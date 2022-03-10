@@ -87,7 +87,7 @@ Berikutnya, jalankan perintah `docker compose up -d` dan akses `laravel.local` m
 
 ### Troubleshoots
 
-### Mendapatkan exception UnexpectedValueException.
+### Mendapatkan exception UnexpectedValueException
 
 ```bash
 UnexpectedValueException
@@ -100,7 +100,7 @@ Masuk ke docker container sebagai root dengan `docker exec -it nama-container sh
 chown -R www-data:www-data storage
 ```
 
-### Mendapatkan exception MissingAppKeyException.
+### Mendapatkan exception MissingAppKeyException
 
 ```php
 Illuminate\Encryption\MissingAppKeyException
