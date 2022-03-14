@@ -43,7 +43,7 @@ code .
 Buat berkas bernama `docker-compose.yml` berisi sebagai berikut:
 
 ```yaml
-version: '3.8'
+version: "3.8"
 services:
   nama-service:
     container_name: nama-container
@@ -55,7 +55,7 @@ services:
       - 1.1.1.1
       - 1.0.0.1
     extra_hosts:
-      - 'host.docker.internal:host-gateway'
+      - "host.docker.internal:host-gateway"
     networks:
       - nginx-proxy-network
 
@@ -69,7 +69,7 @@ Penjelasan dari `docker-compose.yml` lebih lengkap dapat dilihat pada [Compose f
 - `nama-service` dan `nama-container`: Bisa diberi nama bebas, untuk mempermudah bisa diberi nama yang sama, contoh: `proyek-laravel`
 - `image`: Dapat menggunakan `dptsi/laravel-web-dev`
 
-Berikutnya buat berkas `.env` berisi konfigurasi dari `nginx-proxy` dan tambahkan domain serta private IP address PC development di /etc/hosts atau C:\Windows\System32\drivers\etc\hosts (pakai HostsMan).
+Berikutnya buat berkas `.env` yang isinya berupa konfigurasi dari `nginx-proxy`
 
 ```env
 VIRTUAL_HOST=laravel.local
@@ -77,7 +77,9 @@ VIRTUAL_PORT=8080
 SELF_SIGNED_HOST=laravel.local
 ```
 
-Jalankan perintah berikut untuk memasang Laravel
+Kemudian, tambahkan domain serta private IP address PC development di /etc/hosts atau C:\Windows\System32\drivers\etc\hosts (menggunakan HostsMan).
+
+Setelah itu, jalankan perintah berikut untuk memasang Laravel
 
 ```bash
 composer create-project laravel/laravel src
